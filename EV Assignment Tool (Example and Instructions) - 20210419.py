@@ -301,7 +301,10 @@ for i in range(len(EVLo)):
         
 
 #----------------------------------------------------------------------------------------------------------
-os.mkdir('Results_example')
+outputpath=os.getcwd()+'/Results_example'
+if not(os.path.exists(outputpath)):
+    os.mkdir('Results_example')
+    
 np.savetxt('Results_example/Assignment Matrix_example.csv', X, delimiter=",")
 np.savetxt('Results_example/Access Time + Charging Time Matrix_example.csv', d_final, delimiter=",")
 
@@ -391,6 +394,9 @@ print("Wall Time:", np.round(end - start,2),"seconds")
 ################################### Assignment Algorithm Ends ######################################
 
 
+'''
+
+
 """
 The tool outputs the assignment matrix, the access costs matrix (Travel and wait time matrix), number of steady-state charging stations, number of iterations when converge, table of charging station utilization ratio and expected wait time at UE, and average access time of origins at UE. In the example, these results are printed out. While in the following tool, the outputs are saved as CSV files.
 
@@ -459,7 +465,7 @@ c = np.genfromtxt('NYC_Zone_public_charging_station_distance_matrix.csv', delimi
 """
 
 #set travel speed
-v = 
+v = 100
 c = c/v
 
 """
@@ -497,7 +503,7 @@ e = 10**-3 #this is the value that we recommend for city-scale runs
 """
 
 #set printing
-pri = 
+pri = 10
 
 
 """
@@ -727,6 +733,7 @@ end = time.process_time()
 print("Wall Time:", np.round(end - start,2),"seconds")
 ################################### Assignment Algorithm Ends ######################################
 
+'''
 
 """
 Github link:
