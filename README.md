@@ -112,7 +112,7 @@ Run the algorithm below:
 
 
 
-### 4 Example
+### 4 Example (for our experiment, run the file "EV Assignment Tool (Example and Instructions) - 20210419.py" directly)
 We use a small example with 5 EV parking locations (demand nodes) and 3 charging stations to illustrate how the example works.
 
 EV parking location table:
